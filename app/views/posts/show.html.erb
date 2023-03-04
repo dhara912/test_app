@@ -1,0 +1,18 @@
+
+<div class="container mt-4">
+  <div class="card text-center mt-2">
+    <div class="card-header">
+      Comments
+    </div>
+  </div>
+  <div class="chat-container">
+    <div class="message">
+      <%= render @post.comments %>
+    </div>
+  </div>
+  <%= render 'comments/form' %>
+</div>
+
+
+
+

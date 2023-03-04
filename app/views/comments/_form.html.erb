@@ -1,0 +1,10 @@
+<%= form_with model: [ @post, @post.comments.build ], class: "send-message-form" do |form| %>
+  <div class="row">
+    <div class="col-11">
+      <%= form.text_field :description, class:"form-control  col-md-3 mr-1", placeholder: "Add Comments..." %>
+    </div>
+    <div class="col-1 text-end">   
+      <%= form.button '<i class="bi bi-send-fill"></i>'.html_safe, type: 'submit', data: {disable_with: false}, class: 'btn btn-light' %>
+    </div>
+  </div>
+<% end %>

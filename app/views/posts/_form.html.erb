@@ -1,0 +1,21 @@
+<%= form_with model: post do |form| %>
+  <div class="mt-4">
+    <%= form.label :title %>
+    <%= form.text_field :title, class:"form-control  col-md-3 mr-1"%>
+    <% post.errors.full_messages_for(:title).each do |message| %>
+      <div><%= message %></div>
+    <% end %>
+  </div>
+
+  <div class="mt-4">
+    <%= form.label :description %>
+    <%= form.text_area :description, class:"form-control  col-md-3 mr-1" %>
+    <% post.errors.full_messages_for(:description).each do |message| %>
+      <div><%= message %></div>
+    <% end %>
+  </div>
+
+  <div class="mt-4">
+    <%= form.submit class:"btn btn-lg btn-primary btn-block form-control col-md-3 mr-1" %>
+  </div>
+<% end %>

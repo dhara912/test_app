@@ -1,0 +1,8 @@
+<nav class="navbar sticky-top bg-light">
+  <div class="container-fluid">
+    <%= link_to "Test App", root_path, class: "navbar-brand" %>
+    <% if user_signed_in? %>
+      <%= link_to "Logout", destroy_user_session_path, method: :delete, class: "float-end nav-link" %>
+    <% end %>
+  </div>
+</nav>

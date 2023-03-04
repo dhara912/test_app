@@ -1,0 +1,20 @@
+<div class="row">
+  <div class="col-sm-9 col-md-7 col-lg-4 mx-auto">
+    <div class="card my-5 shadow">
+      <div class="card-body m-3">
+        <div class="row">
+          <div class="col">
+            <h2>Edit Post</h2>
+          </div>
+
+          <div class="col-md-1 text-right">
+            <%= link_to root_path, class: "btn btn-primary", toggle: 'tooltip', placement: 'top', title: 'Back' do %>
+              <i class='bi bi-arrow-left' aria-hidden='true'></i>
+            <% end %>
+          </div>
+          <%= render 'form', post: @post %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
